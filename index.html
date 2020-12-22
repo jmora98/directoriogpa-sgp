@@ -1,23 +1,25 @@
 <html>
-  <head>
-    <title></title>
-    <meta content="">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css"
-    <style></style>
-    <script type="text/javascript">
-    (function(document) {
+
+<head>
+  <title></title>
+  <meta content="">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css" <style>
+  </style>
+  <script type="text/javascript">
+    (function (document) {
       'use strict';
 
-      var LightTableFilter = (function(Arr) {
+      var LightTableFilter = (function (Arr) {
 
         var _input;
 
         function _onInputEvent(e) {
           _input = e.target;
           var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
-          Arr.forEach.call(tables, function(table) {
-            Arr.forEach.call(table.tBodies, function(tbody) {
+          Arr.forEach.call(tables, function (table) {
+            Arr.forEach.call(table.tBodies, function (tbody) {
               Arr.forEach.call(tbody.rows, _filter);
             });
           });
@@ -29,99 +31,839 @@
         }
 
         return {
-          init: function() {
+          init: function () {
             var inputs = document.getElementsByClassName('light-table-filter');
-            Arr.forEach.call(inputs, function(input) {
+            Arr.forEach.call(inputs, function (input) {
               input.oninput = _onInputEvent;
             });
           }
         };
       })(Array.prototype);
 
-      document.addEventListener('readystatechange', function() {
+      document.addEventListener('readystatechange', function () {
         if (document.readyState === 'complete') {
           LightTableFilter.init();
         }
       });
 
     })(document);
-    </script>
-  </head>
-  <body>
+  </script>
+</head>
 
-    <div class="container">
-      <div style="height:50px"></div>
+<body>
 
-      <img src="SGP.jpg" class="rounded float-right" alt="..." height="93 px "
-      width="193"> 
-    
-      <img src="descarga.png" class="rounded float-right" alt="..." height="93 px "
-      width="193">
-    
+  <div class="container">
+    <div style="height:50px"></div>
 
-      <h1 class="title"> Directorio Telefonico <small>GPA/SGP</small></h1>
-      
-      <p class="lead">
-        
-      <h3>Digite el nombre de la persona</h3>
-      
+    <img src="SGP.jpg" class="rounded float-right" alt="..." height="93 px " width="193">
 
-      <input class="form-control col-md-3 light-table-filter" data-table="order-table" type="text" placeholder="Buscar...">
-      <hr>
+    <img src="descarga.png" class="rounded float-right" alt="..." height="93 px " width="193">
 
-      <table class="table table-bordered order-table ">
-        <thead class="relleno">
-          <tr>
-            <th>Nombre</th>
-            <th>Área</th>
-            <th >Extensión</th>
-            <th>Correo</th>
-          </tr>
-        </thead>
-        <tr>
-          <td>Diego Alejandro Mora Suarez</td>
-          <td>Tecnologia</td>
-          <td class="negrita">5049</td>
-          <td>dmora@gomezpinedaabogados.com</td>
-        </tr>
-        <tr>
-          <td>Contructora Amarilo</td>
-          <td>Jhon Sanchez</td>
-          <td>Colombia</td>
-        </tr>
-        <tr>
-          <td>Centro comercial Primavera</td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-        </tr>
-        <tr>
-          <td>Google SAS</td>
-          <td>Mario Hernando</td>
-          <td>Austria</td>
-        </tr>
-        <tr>
-          <td>Bancolombia</td>
-          <td>Alejandra Tamayo</td>
-          <td>UK</td>
-        </tr>
-        <tr>
-          <td>Orange SAS</td>
-          <td>Andres Suarez</td>
-          <td>Germany</td>
-        </tr>
-        <tr>
-          <td>Software OneTech</td>
-          <td>Yoshi Tannamuri</td>
-          <td>Canada</td>
-        </tr>
-        <tr>
-          <td>Studio Takaru</td>
-          <td>Yoshi Tannamuri</td>
-          <td>Japan</td>
-        </tr>
-      </table>
 
-    </div> <!-- /container -->
+    <h1 class="title"> Directorio <small>GPA/SGP</small></h1>
 
-  </body>
+    <p class="lead">
+
+    <h3>Digite el nombre de la persona</h3>
+
+
+    <input class="form-control col-md-3 light-table-filter" data-table="order-table" type="text"
+      placeholder="Buscar...">
+    <hr>
+
+    <table class="table table-bordered order-table tamano " >
+      <thead class="relleno">
+        <tr>
+          <th>EXTENSION</th>
+          <th>NOMBRE</th>
+          <th>AREA</th>
+          <th>CARGO</th>
+          <th>CORREO</th>
+        </tr>
+      </thead>
+      <tr class='alt' >
+        <td>6056</td>
+        <td>AGUEDA HERRERA</td>
+        <td>ABOGADOS EXT - BOGOTA</td>
+        <td>ABOGADOS EXT - BOGOTA</td>
+        <td>agueda.herrera@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>5040</td>
+        <td>ALEJANDRO ARBOLEDA</td>
+        <td>CARTERA -CALL CENTER</td>
+        <td>COORDINADOR CARTERA</td>
+        <td>coordcartera@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>5019</td>
+        <td>ANA MARIA GONZALEZ </td>
+        <td>TALENTO HUMANO</td>
+        <td>COORDINADORA TALENTO HUMANO </td>
+        <td>talento_humano@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>5056</td>
+        <td>ANABEL SOTO</td>
+        <td>ADMINISTRATIVO </td>
+        <td>ADMINISTRATIVO</td>
+        <td>aprendiz_admon@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>5055</td>
+        <td>ANDRES SIERRA</td>
+        <td>CONTABILIDAD</td>
+        <td>CONTABILIDAD</td>
+        <td>asierra@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>5016</td>
+        <td>ANNI KATHERINE MOSQUERA SANCHEZ</td>
+        <td>TESORERIA</td>
+        <td>AUXILIAR ADMINISTRATIVA </td>
+        <td>auxiliar_admon@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>5021</td>
+        <td>CONSULTOR RAFAEL SIG</td>
+        <td>CALIDAD</td>
+        <td>CALIDAD</td>
+        <td>calidad@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>N/A</td>
+        <td>CONSULTORA SST</td>
+        <td>CALIDAD</td>
+        <td>CALIDAD</td>
+        <td>sstgpa@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>6054</td>
+        <td>CRISTIAN FELIPE</td>
+        <td>ABOGADOS EXT - BOGOTA</td>
+        <td>DEPENDIENTE </td>
+        <td>dependientenorte@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>6100</td>
+        <td>CRISTINA GAVIRIA</td>
+        <td>RIONEGRO</td>
+        <td>SECRETARIA </td>
+        <td>avallejo@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>5058</td>
+        <td>DANIELA DURAN</td>
+        <td>INMOBILIARIO</td>
+        <td>COORDINADORA INMOBILIARIO</td>
+        <td>inmobiliario@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>1011</td>
+        <td>DANIELA PADIERNDA MEJIA</td>
+        <td>CARTERA - CALL CENTER</td>
+        <td>ASESORA CALL</td>
+        <td>cobranzasbancolombia3@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>5026</td>
+        <td>DAVINSON TANGARIFE</td>
+        <td>DACIONES</td>
+        <td>COORDINADOR FLOTA</td>
+        <td>dtangarife@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>5030</td>
+        <td>DIANA ROSA GUZMAN ARGUMEDO </td>
+        <td>TALENTO HUMANO</td>
+        <td>ANALISTA TALENTO HUMANO </td>
+        <td>analistath@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>5049</td>
+        <td>DIEGO ALEJANDRO MORA</td>
+        <td>TECNOLOGIA</td>
+        <td>COORDINADOR TECNOLOGIA</td>
+        <td>coordtecnologia@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>1006</td>
+        <td>EDITH SULIANY CORREA MEJIA </td>
+        <td>CARTERA - CALL CENTER</td>
+        <td>ASESORA CALL</td>
+        <td>gestion_gpa@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>5043</td>
+        <td>ERIKA GARCIA DUQUE</td>
+        <td>INMOBILIARIO</td>
+        <td>ANALISTA INMOBILIARIO</td>
+        <td>inmobiliario6@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>6053</td>
+        <td>ERIKA LOPEZ VENCE</td>
+        <td>ABOGADOS EXT - BOGOTA</td>
+        <td>ABOGADA</td>
+        <td>erikavence@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>6050</td>
+        <td>ERIKA MORALES</td>
+        <td>ABOGADOS EXT - BOGOTA</td>
+        <td>AUXILIAR ADMINISTRATIVA </td>
+        <td>emorales@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>5014</td>
+        <td>GLORIA PATRICIA GOMEZ PINEDA</td>
+        <td>JURIDICO</td>
+        <td>SOCIA </td>
+        <td>gloriapatricia@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>6051</td>
+        <td>HERNAN DAVID MARTINEZ GOMEZ</td>
+        <td>ABOGADOS EXT - BOGOTA</td>
+        <td></td>
+        <td>hdavid@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>2007</td>
+        <td>JARRISON DURANGO RAMIREZ</td>
+        <td>CONTABILIDAD</td>
+        <td>ANALISTA CONTABILIDAD </td>
+        <td>analistacontable1@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>1030</td>
+        <td>JUAN DAVID GUERRA MORENO </td>
+        <td>INMOBILIARIO</td>
+        <td>ABOGADO </td>
+        <td>jguerra@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>5022</td>
+        <td>JULIAN MORA MOLINA </td>
+        <td>TECNOLOGIA</td>
+        <td>AUXILIAR TECNOLOGIA</td>
+        <td>jmolina@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>5041</td>
+        <td>JULIANA RONDÒN YEPES </td>
+        <td>TALENTO HUMANO</td>
+        <td>APRENDIZ TALENTO HUMANO</td>
+        <td>auxiliargestionh@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>5035</td>
+        <td>JURIDICO - JUAN DAVID GUERRA</td>
+        <td>JURIDICO</td>
+        <td>ABOGADO </td>
+        <td>inmobiliario1@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td></td>
+        <td>KATHERINE CASTRILLON TOBON</td>
+        <td>JURIDICO</td>
+        <td>DEPENDIENTE </td>
+        <td>dependientejudicial5@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>1003</td>
+        <td>LIZETH BIBIANA MARIN </td>
+        <td>CARTERA -CALL CENTER</td>
+        <td>ASESORA CALL</td>
+        <td>gestion_gpa1@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>5015</td>
+        <td>MANAURE TANGARIFE MUÑOZ</td>
+        <td>DACIONES</td>
+        <td>ANALISTA FLOTA </td>
+        <td>daciones@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>5002</td>
+        <td>MARIA ADELAIDA VELEZ</td>
+        <td>INMOBILIARIO</td>
+        <td>ABOGADA INMOBILIARIO</td>
+        <td>inmobiliario2@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>5006</td>
+        <td>MARIA ELENA GOMEZ PINEDA</td>
+        <td>GERENCIA</td>
+        <td>GERENTE</td>
+        <td>mariaelena@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>6052</td>
+        <td>MARIA FERNANDA DAVILA</td>
+        <td>ABOGADOS EXT - BOGOTA</td>
+        <td>ABOGADA</td>
+        <td>mdavila@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>5045</td>
+        <td>MARIA ISABEL VILLADA PUERTA </td>
+        <td>ADMINISTRATIVO </td>
+        <td>LIDER FINANCIERA </td>
+        <td>administrativo@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>MARTHA CECILIA MONTOYA CARDONA </td>
+        <td>SERVICIOS GENERALES </td>
+        <td>SERVICIOS GENERALES</td>
+        <td>3217467783</td>
+      </tr>
+      <tr class='alt'>
+        <td>5013</td>
+        <td>MATEO ZAPATA DELGADO</td>
+        <td>JURIDICO</td>
+        <td>JURIDICO</td>
+        <td>mzapata@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>2024</td>
+        <td>MILTON GRANDET JIMENEZ</td>
+        <td>INMOBILIARIO</td>
+        <td>COMPRAS</td>
+        <td>compras@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>2031</td>
+        <td>NATALIA SALDARRIAGA PAREJA</td>
+        <td>INMOBILIARIO</td>
+        <td>ANALISTA INMOBILIARIO</td>
+        <td>legalizacion@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>6300</td>
+        <td>OLGA LUCIA GOMEZ PINEDA</td>
+        <td>RIONEGRO</td>
+        <td>SOCIA </td>
+        <td>olgomez@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>6055</td>
+        <td>OSCAR DAVID GOMEZ PINEDA</td>
+        <td>ABOGADOS EXT - BOGOTA</td>
+        <td>SOCIO</td>
+        <td>oscardavid@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>RODRIGO JARAMILLO QUINTERO </td>
+        <td>SERVICIOS GENERALES </td>
+        <td></td>
+        <td>rodrigo@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>5050</td>
+        <td>SALA DE JUNTAS</td>
+        <td>SALAS REUNIONES / JUNTAS</td>
+        <td>SALAS REUNIONES / JUNTAS</td>
+        <td>saladejuntas@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>5054</td>
+        <td>SALA DE REUNIONES 1</td>
+        <td>SALAS REUNIONES / JUNTAS</td>
+        <td>SALAS REUNIONES / JUNTAS</td>
+        <td>N/A</td>
+      </tr>
+      <tr class='alt'>
+        <td>5048</td>
+        <td>SANDRA MILENA PINTO VASQUEZ</td>
+        <td>ADMINISTRATIVO </td>
+        <td>DIRECTORA ADMINISTRATIVA-COMERCIAL</td>
+        <td>spinto@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>5029</td>
+        <td>SEBASTIAN LOPEZ</td>
+        <td>CONTABILIDAD</td>
+        <td>CONTABILIDAD</td>
+        <td>auxiliarcontable3@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>1029</td>
+        <td>SINDY YULIED VELEZ MOLINA</td>
+        <td>CARTERA - CALL CENTER</td>
+        <td>ASESORA CALL</td>
+        <td>cobranzasbancolombia@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>5000</td>
+        <td>VIVIANA TRINIDAD BERRIO ALZATE </td>
+        <td>SERVICIOS GENERALES </td>
+        <td>RECEPCIONISTA</td>
+        <td>info@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>5054</td>
+        <td>WILFRE CORREA GIRALDO</td>
+        <td>TESORERIA</td>
+        <td>ANALISTA TESORIA </td>
+        <td>tesoreria@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>5020</td>
+        <td>YISEL MARITZA FORONDA RODRIGUEZ</td>
+        <td>DACIONES</td>
+        <td>ASESORA CALL</td>
+        <td>corresponsales@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>5037</td>
+        <td>YOHAN NAVARRO</td>
+        <td>BRUJULA</td>
+        <td>BRUJULA</td>
+        <td>ynavarro@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>4042</td>
+        <td>ALBA LORENA TORRES GOMEZ</td>
+        <td>SGP</td>
+        <td>ABOGADA COORDINADORA</td>
+        <td>ltorres@alianzasgp.com.co</td>
+      </tr>
+      <tr>
+        <td>4035</td>
+        <td>ANA MARIA CASTAÑO GALLEGO</td>
+        <td>SGP</td>
+        <td>ASISTENTE ADMINISTRATIVA</td>
+        <td>asistenteadministrativa@alianzasgp.com.co</td>
+      </tr>
+      <tr class='alt'>
+        <td>4036</td>
+        <td>ANA MARIA VALENCIA GOMEZ</td>
+        <td>SGP</td>
+        <td>AUXILIAR ADMINISTRATIVA</td>
+        <td>auxpreparacion5@alianzasgp.com.co</td>
+      </tr>
+      <tr>
+        <td>4000</td>
+        <td>ANDREA GIRALDO GOMEZ</td>
+        <td>SGP</td>
+        <td>ABOGADA COORDINADORA</td>
+        <td>abogadocali2@alianzasgp.com.co</td>
+      </tr>
+      <tr class='alt'>
+        <td>4003</td>
+        <td>ANGELA MARIA RAMIREZ BERNAL</td>
+        <td>SGP</td>
+        <td>ABOGADO COORDINADOR</td>
+        <td>abogadobogota1@alianzasgp.com.co</td>
+      </tr>
+      <tr>
+        <td>2023</td>
+        <td>CARLOS ANTONIO SILVA CORREA</td>
+        <td>SGP</td>
+        <td>ABOGADO COORDINADOR </td>
+        <td>abogadocaribe2@alianzasgp.com.co</td>
+      </tr>
+      <tr class='alt'>
+        <td>4004</td>
+        <td>CLAUDIA JULIANA PINEDA PARRA</td>
+        <td>SGP</td>
+        <td>GERENTE JURIDICA</td>
+        <td>jpineda@alianzasgp.com.co</td>
+      </tr>
+      <tr>
+        <td>5027</td>
+        <td>CRISTIAN CAMILO MONTOYA</td>
+        <td>SGP</td>
+        <td>CONTABILIDAD</td>
+        <td>auxiliarcontable1@gomezpinedaabogados.com</td>
+      </tr>
+      <tr class='alt'>
+        <td>N/A</td>
+        <td>DEISY JOHANA CASTAÑEDA VARGAS</td>
+        <td>SGP</td>
+        <td>ABOGADA COORDINADORA</td>
+        <td>abogadobucaramanga1@alianzasgp.com.co</td>
+      </tr>
+      <tr>
+        <td>4046</td>
+        <td>DIANA MARCELA CASTAÑO RUA</td>
+        <td>SGP</td>
+        <td>JEFE DE OPERACIONES </td>
+        <td>dcastano@alianzasgp.com.co</td>
+      </tr>
+      <tr class='alt'>
+        <td>4014</td>
+        <td>DIANA MARCELA VILLAMIL</td>
+        <td>SGP</td>
+        <td>ABOGADA COORDINADORA</td>
+        <td>abogadobogota5@alianzasgp.com.co</td>
+      </tr>
+      <tr>
+        <td>7001</td>
+        <td>ELIECER DAVID FLOREZ RODRIGUEZ</td>
+        <td>SGP</td>
+        <td>ABOGADO COORDINADOR</td>
+        <td>abogadobucaramanga3@alianzasgp.com.co</td>
+      </tr>
+      <tr class='alt'>
+        <td></td>
+        <td>FELIPE LOPEZ QUICENO</td>
+        <td>SGP</td>
+        <td>JURIDICO GERENCIA</td>
+        <td>flopez@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>4043</td>
+        <td>FREDDY GONZALO RUIZ CASTIBLANCO</td>
+        <td>SGP</td>
+        <td>ABOGADO COORDINADOR </td>
+        <td>abogadobogota2@alianzasgp.com.co</td>
+      </tr>
+      <tr class='alt'>
+        <td>4005</td>
+        <td>GERMAN EDUARDO URQUIJO</td>
+        <td>SGP</td>
+        <td>JURIDICO - BOGOTA</td>
+        <td>juridicobogota2@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>4024</td>
+        <td>JENNY LISET CASTRILLON JARAMILLO</td>
+        <td>SGP</td>
+        <td>AUXILIAR ADMINISTRATIVA</td>
+        <td>auxpreparacion2@alianzasgp.com.co</td>
+      </tr>
+      <tr class='alt'>
+        <td>4039</td>
+        <td>JESSICA MARCELA RENGIFO GUERRERO</td>
+        <td>SGP</td>
+        <td>ABOGADA COORDINADORA</td>
+        <td>abogadocali1@alianzasgp.com.co</td>
+      </tr>
+      <tr>
+        <td>2025</td>
+        <td>JHON ALEXANDER RIAÑO GUZMAN </td>
+        <td>SGP</td>
+        <td>ABOGADO SENIOR</td>
+        <td>ariano@alianzasgp.com.co</td>
+      </tr>
+      <tr class='alt'>
+        <td></td>
+        <td>JOSE DAVID CASTRO CARDENAS</td>
+        <td>SGP</td>
+        <td>AUXILIAR ADMINISTRATIVA</td>
+        <td>auxpreparacion3@alianzasgp.com.co</td>
+      </tr>
+      <tr>
+        <td>4002</td>
+        <td>JUAN ESTEBAN PELAEZ DIAZ</td>
+        <td>SGP</td>
+        <td>ABOGADO COORDINADOR</td>
+        <td>abogadoantioquia1@alianzasgp.com.co</td>
+      </tr>
+      <tr class='alt'>
+        <td></td>
+        <td>JUAN MANUEL RAMIREZ BEDOYA</td>
+        <td>SGP</td>
+        <td>AUXILIAR ADMINISTRATIVO</td>
+        <td>auxestructurador4@alianzasgp.com.co</td>
+      </tr>
+      <tr>
+        <td>7004</td>
+        <td>JUNIOR ELIECER MANRIQUE JULIO</td>
+        <td>SGP</td>
+        <td>ABOGADO COORDINADOR</td>
+        <td>abogadobucaramanga2@alianzasgp.com.co</td>
+      </tr>
+      <tr class='alt'>
+        <td>5046</td>
+        <td>KATERIN QUIROS CUARTAS </td>
+        <td>SGP</td>
+        <td>ANALISTA DE ESTRUCTURACION Y PREPARACION DEMANDAS</td>
+        <td>auxestructurador3@alianzasgp.com.co</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>KEVIN ANDRES JARAMILLO ORTEGA</td>
+        <td>SGP</td>
+        <td>PRACTICANTE</td>
+        <td>practicante1@alianzasgp.com.co</td>
+      </tr>
+      <tr class='alt'>
+        <td>4022</td>
+        <td>LUIS JERONIMO ARANGO SERRANO</td>
+        <td>SGP</td>
+        <td>COORDINADOR PREPARADOR DEMANDAS</td>
+        <td>ljarango@alianzasgp.com.co</td>
+      </tr>
+      <tr>
+        <td>4018</td>
+        <td>MARIA ALEJANDRA BLANCO ZABALA</td>
+        <td>SGP</td>
+        <td>DIRECTORA ADMINISTRATIVA</td>
+        <td>mblanco@alianzasgp.com.co</td>
+      </tr>
+      <tr class='alt'>
+        <td></td>
+        <td>MARIA ALEJANDRA CAÑAS GARCIA</td>
+        <td>SGP</td>
+        <td>AUXILIAR ADMINISTRATIVA</td>
+        <td>auxpreparacion7@alianzasgp.com.co</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>MARIA FERNANDA ANGARITA BEDOYA</td>
+        <td>SGP</td>
+        <td>AUXILIAR ADMINISTRATIVA</td>
+        <td>auxpreparacion6@alianzasgp.com.co</td>
+      </tr>
+      <tr class='alt'>
+        <td>5047</td>
+        <td>MARIA FERNANDA PABON ROMERO</td>
+        <td>SGP</td>
+        <td>GERENTE JURIDICA</td>
+        <td>mpabon@alianzasgp.com.co</td>
+      </tr>
+      <tr>
+        <td>4013</td>
+        <td>MARIA JOSE GOMEZ GUTIERREZ</td>
+        <td>SGP</td>
+        <td>ABOGADA COORDINADORA</td>
+        <td>abogadoantioquia3@alianzasgp.com.co</td>
+      </tr>
+      <tr class='alt'>
+        <td>4015</td>
+        <td>MARIA MERCEDES PUCHE BERROCAL</td>
+        <td>SGP</td>
+        <td>ABOGADA COORDINADORA</td>
+        <td>abogadoantioquia2@alianzasgp.com.co</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>MARIANA RODELO BENAVIDES</td>
+        <td>SGP</td>
+        <td>PRACTICANTE</td>
+        <td>auxpreparacion4@alianzasgp.com.co</td>
+      </tr>
+      <tr class='alt'>
+        <td>5004</td>
+        <td>MARIBEL TORRES ISAZA</td>
+        <td>SGP</td>
+        <td>GERENTE GENERAL </td>
+        <td>mtorresi@alianzasgp.com.co</td>
+      </tr>
+      <tr>
+        <td>4017</td>
+        <td>PEDRO LUIS PARRA JULIO</td>
+        <td>SGP</td>
+        <td>AUXILIAR ADMINISTRATIVO</td>
+        <td>ltovar@alianzasgp.com.co</td>
+      </tr>
+      <tr class='alt'>
+        <td>4040</td>
+        <td>SANTIAGO BURITICA CORREA</td>
+        <td>SGP</td>
+        <td>ANALISTA PROCESO CONCURSALES</td>
+        <td>analistaconcursal4@alianzasgp.com.co</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>SARA LOPEZ CALLE</td>
+        <td>SGP</td>
+        <td>AUXILIAR ADMINISTRATIVA</td>
+        <td>auxpreparacion1@alianzasgp.com.co</td>
+      </tr>
+      <tr class='alt'>
+        <td></td>
+        <td>SINDY DANIELA CHANCI TORO</td>
+        <td>SGP</td>
+        <td>AUXILIAR ADMINISTRATIVA</td>
+        <td>auxpreparacion4@alianzasgp.com.co</td>
+      </tr>
+      <tr>
+        <td>4045</td>
+        <td>VALENTINA AGUIRRE MARTINEZ </td>
+        <td>SGP</td>
+        <td>AUXILIAR ADMINISTRATIVA</td>
+        <td>auxestructurador4@alianzasgp.com.co</td>
+      </tr>
+      <tr class='alt'>
+        <td>4037</td>
+        <td>VIVIANA ANDREA DELGADO ZAPATA</td>
+        <td>SGP</td>
+        <td>AUXILIAR ADMINISTRATIVA</td>
+        <td>auxpreparacion8@alianzasgp.com.co</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>YULIANA ANDREA PATIÑO PEREZ</td>
+        <td>SGP</td>
+        <td>AUXILIAR ADMINISTRATIVA</td>
+        <td>auxpreparacion10@alianzasgp.com.co</td>
+      </tr>
+      <tr class='alt'>
+        <td></td>
+        <td>JUAN MANUEL RAMIREZ BEDOYA</td>
+        <td>SGP</td>
+        <td>AUXILIAR ADMINISTRATIVO</td>
+        <td>auxestructurador4@alianzasgp.com.co</td>
+      </tr>
+      <tr>
+        <td>2025</td>
+        <td>JHON ALEXANDER RIAÑO GUZMAN </td>
+        <td>SGP</td>
+        <td>ABOGADO SENIOR</td>
+        <td>ariano@alianzasgp.com.co</td>
+      </tr>
+      <tr class='alt'>
+        <td>4040</td>
+        <td>SANTIAGO BURITICA CORREA</td>
+        <td>SGP</td>
+        <td>ANALISTA PROCESO CONCURSALES</td>
+        <td>analistaconcursal4@alianzasgp.com.co</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>YENIFER GUTIERREZ GRANADA </td>
+        <td>SGP</td>
+        <td>AUXILIAR ADMINISTRATIVA</td>
+        <td>aun no tiene correo</td>
+      </tr>
+      <tr class='alt'>
+        <td>4005</td>
+        <td>GERMAN EDUARDO URQUIJO</td>
+        <td>SGP</td>
+        <td>JURIDICO - BOGOTA</td>
+        <td>juridicobogota2@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>5027</td>
+        <td>CRISTIAN CAMILO MONTOYA</td>
+        <td>SGP</td>
+        <td>CONTABILIDAD</td>
+        <td>auxiliarcontable1@gomezpinedaabogados.com</td>
+      </tr>
+      <tr>
+        <td>4012</td>
+        <td>EFRAIN OSWALDO LATORRE BURBANO</td>
+        <td>ALIANZA SGP</td>
+        <td>auxjuridico@gomezpinedaabogados.com</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>4021</td>
+        <td>LADY ALEXANDRA CAMACHO CARDENAS </td>
+        <td>ALIANZA SGP</td>
+        <td>auxadministrativosgp@alianzasgp.com.co</td>
+        <td></td>
+      </tr>
+      <tr class='alt'>
+        <td>4010</td>
+        <td>LAURA SOFIA FARIETA ROZO</td>
+        <td>ALIANZA SGP</td>
+        <td>abogadobogota3@alianzasgp.com.co</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>4022</td>
+        <td>LUIS JERONIMO ARANGO SERRANO     </td>
+        <td>ALIANZA SGP</td>
+        <td>ljarango@alianzasgp.com.co</td>
+        <td></td>
+      </tr>
+      <tr class='alt'>
+        <td>4018</td>
+        <td>MARIA ALEJANDRA BLANCO ZABALA</td>
+        <td>ALIANZA SGP</td>
+        <td>mblanco@alianzasgp.com.co</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>5047</td>
+        <td>MARIA FERNANDA PABON ROMERO </td>
+        <td>ALIANZA SGP</td>
+        <td>mpabon@alianzasgp.com.co</td>
+        <td></td>
+      </tr>
+      <tr class='alt'>
+        <td>4025</td>
+        <td>MARIA ISABEL CHAVARRIA TOBON</td>
+        <td>ALIANZA SGP</td>
+        <td>auxpreparacion1@alianzasgp.com.co</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>4015</td>
+        <td>MARIA MERCEDES PUCHE BERROCAL </td>
+        <td>ALIANZA SGP</td>
+        <td>abogadoantioquia2@alianzasgp.com.co</td>
+        <td></td>
+      </tr>
+      <tr class='alt'>
+        <td>5004</td>
+        <td>MARIBEL TORRES ISAZA</td>
+        <td>ALIANZA SGP</td>
+        <td>mtorresi@alianzasgp.com.co</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>4034</td>
+        <td>MATEO URIBE ORTEGA</td>
+        <td>ALIANZA SGP</td>
+        <td>dependiente1@alianzasgp.com.co</td>
+        <td></td>
+      </tr>
+      <tr class='alt'>
+        <td>4019</td>
+        <td>MONICA MARIA GUZMAN COAVA</td>
+        <td>ALIANZA SGP</td>
+        <td>pqrs_sgp@alianzasgp.com.co</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>4031</td>
+        <td>PAULA ANDREA CASTRO CASTRO</td>
+        <td>ALIANZA SGP</td>
+        <td>auxpreparacion4@alianzasgp.com.co</td>
+        <td></td>
+      </tr>
+      <tr class='alt'>
+        <td>4005</td>
+        <td>SIMON POSADA ACEVEDO </td>
+        <td>ALIANZA SGP</td>
+        <td>abogado1gm@alianzasgp.com.co</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>4037</td>
+        <td>VIVIANA ANDREA DELGADO ZAPATA</td>
+        <td>ALIANZA SGP</td>
+        <td>auxpreparacion8@alianzasgp.com.co</td>
+        <td></td>
+      </tr>
+      <tr class='alt'>
+        <td>4020</td>
+        <td>VIVIANA CAROLINA JARAMILLO GUZMAN</td>
+        <td>ALIANZA SGP</td>
+        <td>Itovar@alianzasgp.com.co</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>4033</td>
+        <td>YULIANA ANDREA PATIÑO PEREZ</td>
+        <td>ALIANZA SGP</td>
+        <td>auxpreparacion6@alianzasgp.com.co</td>
+        <td></td>
+      </tr>
+
+
+    </table>
+
+  </div> <!-- /container -->
+
+</body>
+
 </html>
