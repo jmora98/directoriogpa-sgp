@@ -1,0 +1,19 @@
+.title {
+    color:rgb(9, 136, 191);
+    
+}
+
+.centrado{
+    text-align: left ;
+    
+  }
+
+  .relleno {
+    background: rgb(9, 136, 191);
+    color: whitesmoke;  
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  .negrita {
+    font-weight: 700;
+  }
