@@ -32,7 +32,7 @@
   }
 
   .tamano {
-    font-size: 90%;
+    font-size: 100%;
   }
 
   .fondo {
@@ -44,7 +44,7 @@
 
   .fondo2{
     /* Aquí el origen de la imagen */
-    background-image: url(/imagenes/edificio2.jpg);
+    background-image: url(/imagenes/edificio2-min.jpg);
   
     /* Fijar la imagen de fondo este vertical y
       horizontalmente y centrado */
